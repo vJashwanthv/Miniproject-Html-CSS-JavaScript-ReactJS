@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .feedback-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+      img {
+        width: 600px;
+        margin-left: 40px;
+      }
+
+      .emoji {
+  cursor: pointer;
+  font-size: 30px;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="feedback-form">
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm" action="#">
+        <label for="rating">Rate us (1-10):</label>
+        <input
+          type="number"
+          id="rating"
+          name="rating"
+          min="1"
+          max="10"
+          required
+        />
+
+        <label for="comment">Your Views or Suggestions:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <div class="emoji-container">
+            <span class="emoji" onclick="showEmoji('😃')">😃</span>
+            <span class="emoji" onclick="showEmoji('😊')">😊</span>
+            <span class="emoji" onclick="showEmoji('😐')">😐</span>
+            <span class="emoji" onclick="showEmoji('😞')">😞</span>
+        </div><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form><br>
+    Contact us:<a href="">9183240034</a><br><br>
+    <a href="Homepage.html">Go back to homepage:</a>
+    </div>
+    <img src="./resources/feedback.png" alt="give feedback" />
+    <footer>
+      <p>&copy; 2024 MathMarvels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function showEmoji(emoji) {
+        if(emoji=='😃')
+        {
+        alert("You are the Marvelous!");
+        }
+        else if (emoji=='😊')
+        {
+        alert("Thanks for choosing Math Marvels");
+        }
+        else if(emoji=='😐' || emoji=='😞')
+        {
+        alert("We will try to give our best.");
+        }
+      }
+
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Thank you so much for your valuable feedback!");
+        });
+    </script>
+  </body>
+</html>

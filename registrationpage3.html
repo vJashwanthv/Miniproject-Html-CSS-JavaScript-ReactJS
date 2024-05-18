@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 20px;
+        overflow-y: auto;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+        font-size: 16px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],#country
+       {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-left: 40px;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+
+      p {
+        padding: 10px 20px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      a{
+  color: #007bff;
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+a:hover {
+  color: #0056b3; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector('button[type="submit"]')
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("number").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var age = document.getElementById("age").value;
+            var country = document.getElementById("country").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phoneNumberRegex = /^(\+?91|0)?[6789]\d{9}$/;
+            if (fullName.trim() === "") {
+              alert("Please enter your full name.");
+            } else if (email.trim() === "" || !emailRegex.test(email)) {
+              alert("Please enter a valid email address.");
+            } else if (
+              phoneNumber.trim() === "" ||
+              !phoneNumberRegex.test(phoneNumber)
+            ) {
+              alert("Please enter a valid phone number.");
+            } else if (gender === null) {
+              alert("Please select your gender.");
+            } else if (age.trim() === "") {
+              alert("Please enter your age.");
+            } else if (country.trim() === "") {
+              alert("Please select your country.");
+            } else {
+              window.location.href = "./learningpage.html";
+            }
+          });
+      });
+    </script>
+
+    <h1>Play With Math!</h1>
+    <i style="font-weight: bolder">
+      "Play with Math" is an interactive course designed to immerse users in the
+      fascinating world of geometry. Through engaging activities and hands-on
+      exercises, participants explore fundamental mathematical concepts while
+      having fun. The course covers topics such as shapes, angles, symmetry,
+      transformations, and spatial reasoning.<br /><br />
+      Participants are encouraged to experiment with geometric principles
+      through interactive games, puzzles, and simulations. They develop a deeper
+      understanding of geometry by actively manipulating shapes, visualizing
+      transformations, and solving problems in a dynamic learning
+      environment.<br /><br />
+      With a focus on exploration and discovery, "Play with Math" fosters
+      critical thinking and problem-solving skills. By encouraging creativity
+      and curiosity, the course aims to make geometry accessible and enjoyable
+      for learners of all ages and backgrounds. Whether you're a math enthusiast
+      or a novice, "Play with Math" offers an engaging way to delve into
+      geometric concepts and unlock the beauty of mathematics.<br /><br />
+    </i>
+    <img src="./resources/regimg3.png" alt="shapes" width="600px" />
+    <form id="registrationForm" action="./learningpage.html">
+      <h2>Register for our Course PLAYwithMATH for free!</h2>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br /><br />
+      <label for="number">Phone Number:</label>
+      <input type="number" id="number" name="number" required /><br /><br />
+
+
+        <legend>Gender:</legend>
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" required />Male
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" required/>Female
+        </label>
+        <label for="other">
+          <input type="radio" id="other" name="gender" value="other" required />Other
+        </label>
+
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required />
+      <br /><br />
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="CA">Canada</option>
+        <option value="">India</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+      <br /><br />
+      <a href="index.html">Go back to SignUp</a>
+      <br>
+      <a href="./registrationpage2.html">Go back to SignIn</a>
+    </form>
+
+    <footer>
+      <p>&copy; 2024 MathMarvels. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

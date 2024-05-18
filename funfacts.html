@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometric Fun Facts</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+
+  .fact-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  }
+
+  #newFactButton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="fact-box" id="factBox">
+  <h2>Did You Know?</h2>
+  <p id="factText">Loading fun fact...</p>
+  <button id="newFactButton">Click here for a new fact</button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const funFacts = [
+        "The sum of the angles of a triangle is always 180 degrees.",
+        "A circle is a shape with all points the same distance from its center.",
+        "The Golden Ratio, approximately equal to 1.618, is a special number often found in nature and art.",
+        "A cube has 6 faces, 8 vertices, and 12 edges.",
+        "The Fibonacci sequence can be found in various geometric arrangements, like the spiral of a nautilus shell.",
+        "The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.",
+        "An octagon has 8 sides and 8 angles.",
+        "Fractals are geometric shapes that repeat at different scales.",
+        "A dodecahedron is a polyhedron with 12 faces.",
+        "Tessellations are patterns made of repeating shapes without any gaps or overlaps."
+      ];
+
+      function displayRandomFact() {
+        var randomIndex = Math.floor(Math.random() * funFacts.length);
+        var randomFact = funFacts[randomIndex];
+        document.getElementById("factText").textContent = randomFact;
+      }
+
+      document.getElementById("newFactButton").addEventListener("click", displayRandomFact);
+
+      displayRandomFact();
+    });
+</script>
+</body>
+</html>

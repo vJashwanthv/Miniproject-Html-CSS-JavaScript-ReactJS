@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in Page</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+      }
+
+      #signInForm {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #ff9900;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e68a00;
+      }
+
+      img {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+      }
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+      #video{
+        margin-left: 20px;
+      }
+      a{
+  color: #007bff;
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+a:hover {
+  color: #0056b3; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector('button[type="submit"]')
+          .addEventListener("click", function (event) {
+            var password = document.getElementById("passwordSignIn").value;
+            var passwordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{10,}$/;
+            if (!passwordRegex.test(password)) {
+              alert(
+                "Password must contain at least 10 characters including one lowercase letter, one uppercase letter, one number, and one special character."
+              );
+              event.preventDefault();
+            } else {
+              window.location.href = "./registrationpage3.html"; 
+            }
+          });
+      });
+    </script>
+    <form id="signInForm" action="./registrationpage3.html">
+      <h2>Sign In to Math Marvels</h2>
+      <label for="usernameSignIn">Username:</label>
+      <input type="text" id="usernameSignIn" name="usernameSignIn" required />
+      <br />
+      <label for="passwordSignIn">Password:</label>
+      <input
+        type="password"
+        id="passwordSignIn"
+        name="passwordSignIn"
+        required
+      />
+      <br />
+      <button type="submit">Submit</button>
+      <br />
+      <img src="./resources/regimg2.png" alt="Math Marvels" width="500px" />
+      <a href="index.html">Go to Signup</a>
+      <br/>
+      <br/>
+      <a href="Homepage.html">Go Home</a>
+    </form>
+    <iframe id="video" width="560" height="315" src="./resources/GEOMETRIC MOTION GRAPHIC __ ANIMATION.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <footer>
+      <p>&copy; 2024 MathMarvels. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

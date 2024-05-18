@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learningpage</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f0f0;
+        overflow-y: auto;
+        height: 250vh;
+
+      }
+      .heading {
+        color: darkblue;
+        font-size: 2.5rem;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: lightskyblue;
+      height: 15vh;      }
+      nav {
+        display: flex;
+        height: 5vh;
+        background-color: black;
+      }
+      a:hover {
+        background-color: #333;
+        color: white;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        max-height: 100%;
+        padding: 0 10px;
+      }
+      .navbar {
+        display: flex;
+        gap: 20px;
+        padding-left: 2%;
+      }
+      .box {
+        float: left;
+        height: 1000px;
+        width: 31.94%;
+        padding: 10px;
+        height: 200vh;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #box1 {
+        background-color: #f9f9f9; 
+      }
+      #box2 {
+        background-color: #fcfcfc;
+      }
+      #box3 {
+        background-color: #f5f5f5;
+      }
+      .subheading {
+        font-size: 2.5rem;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+      }
+      .para {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+}
+    </style>
+    <script>
+            function toggleBox(id) {
+            var box = document.getElementById(id);
+            var allBoxes = document.querySelectorAll('.box');
+            allBoxes.forEach(function (element) {
+                element.style.display = 'none';
+            });
+            box.style.display = 'block';
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="heading">Geometric shapes its areas and applications</div>
+    </header>
+    <nav>
+      <div class="navbar">
+        <a href="Homepage.html">Go Home</a>
+        <a href="https://www.splashlearn.com/math-vocabulary/geometry/shape">Basics about common shapes</a>
+        <a href="./funfacts.html">Fun Facts</a>
+        <a href="https://www.splashlearn.com/math-vocabulary/geometry-in-daily-life">Applications</a>
+        <a href="./quiz.html">It's Quiz Time</a>
+        <a href="registrationpage2.html">Log Out</a>
+      </div>
+    </nav>
+    <content>
+      <div class="box" id="box1">
+        <div class="subheading"><h5 style="color: green">Basics about common shapes</h5></div>
+        <div class="para">
+          <h3>Triangle:</h3>
+          <img src="./resources/images - learningpage/Triangle.png" sizes="10" width="300" alt="Triangle">
+          <p>
+            <h4>Area of a Triangle (A):</h4> The area of a triangle is given by the
+            formula A = (1/2) * base * height, where the base and height are
+            perpendicular to each other.
+            <br />
+            <h4>Perimeter of a Triangle (P):</h4> The
+            perimeter is the sum of the lengths of all three sides of the
+            triangle, given by P = side1 + side2 + side3.
+          </p>
+          <hr />
+          <h3>Rectangle:</h3>
+          <img src="./resources/images - learningpage/Rectangle.png" sizes="10" width="300" alt="Rectangle">
+          <p>
+            <h4>Area of a Rectangle (A):</h4> The area of a rectangle is given by the formula A = length * width, where length is the longer side, and width is the shorter side.
+            <h4>Perimeter of a Rectangle (P):</h4> The perimeter is the sum of the lengths of all four sides, given by P = 2 * (length + width).
+          </p>
+          <hr />
+          <h3>Square:</h3>
+          <img src="./resources/images - learningpage/Square.png" sizes="10" width="300"alt="square">
+          <p>
+            <h4>Area of a Square (A):</h4> The area of a square is given by the formula A = side * side, where side is the length of one side of the square.
+            <h4>Perimeter of a Square (P):</h4> The perimeter is the sum of the lengths of all four sides, given by P = 4 * side.
+          </p>
+        </div>
+      </div>
+      <div class="box" id="box2">
+        <div class="subheading"><h5 style="color: blue">Fun Facts</h5></div>
+        <div class="para">
+          <p>
+            <h3>Pi Day Celebration:</h3>
+            <img src="./resources/images - learningpage/Pi.png" sizes="10" width="300"alt="pi">
+            Pi (π) is an irrational number that represents the ratio of the circumference of a circle to its diameter. Pi Day is celebrated on March 14th (3/14), reflecting the first three digits of pi.
+          </p>
+          <hr />
+          <p>
+            <h3>Tetrahedron in Ancient Egypt:</h3>
+            <img src="./resources/images - learningpage/pyramid.png"sizes="10" width="300" alt="pyramid">
+            The ancient Egyptians considered the tetrahedron, a pyramid with a triangular base, as a symbol of the elemental substance of fire. They associated it with the concept of transformation and regeneration.
+          </p>
+          <hr />
+          <p>
+            <h3>Sierpinski Triangle:</h3>
+            <img src="./resources/images - learningpage/sierpinski.png" sizes="10" width="300"alt="sierpisnki triangle">
+            The Sierpinski Triangle is a fractal named after the Polish mathematician Wacław Sierpiński. It is created by repeatedly removing smaller equilateral triangles from a larger one.
+          </p>
+        </div>
+      </div>
+      <div class="box" id="box3">
+        <div class="subheading"><h5>Applications</h5></div>
+        <div class="para">
+          <p>
+            <h3>Architecture and Design:</h3>
+            <img src="./resources/images - learningpage/arch.png" sizes="10" width="300"alt="architecture">
+            Architects and designers extensively use geometric shapes in their designs. Circles, squares, rectangles, triangles, and other shapes help create aesthetically pleasing and structurally sound buildings.
+            Geometric shapes are employed in the design of floor plans, facades, and interior spaces. For example, circular windows, rectangular doors, and triangular roof structures are common design elements.
+          </p>
+          <hr />
+          <p>
+            <h3>Computer Graphics and Animation:</h3>
+            <img src="./resources/images - learningpage/computer.png" sizes="10" width="300"alt="graphics and animation">
+            In the field of computer graphics and animation, geometric shapes are fundamental components for creating visual elements. 3D models, which form the basis of many digital animations and video games, are often constructed using geometric shapes.
+            Algorithms for rendering and shading rely on geometric primitives like triangles and polygons to create realistic images on computer screens.
+          </p>
+          <hr />
+          <p>
+            <h3>Engineering and Manufacturing:</h3>
+            <img src="./resources/images - learningpage/engman.png" sizes="10" width="300"alt="CAD">
+            Engineers use geometric shapes in the design and analysis of mechanical components and structures. Circles, cylinders, and spheres are common shapes found in mechanical engineering designs.
+            Computer-Aided Design (CAD) software facilitates the creation and manipulation of geometric shapes, aiding engineers in the design process. Geometric modeling is crucial in manufacturing for creating precise specifications for the production of parts and products.
+          </p>
+        </div>
+      </div>
+    </content>
+  </body>
+  <footer>
+    <p>&copy; 2024 MathMarvels. All rights reserved.</p>
+</footer>
+</html>
